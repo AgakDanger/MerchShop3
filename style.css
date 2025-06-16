@@ -19,6 +19,12 @@
             background: rgba(10, 35, 66, 0.95) !important;
             box-shadow: 0 4px 30px rgba(10, 35, 66, 0.2);
         }
+        .navbar-toggler {
+            border-color: rgba(255,255,255,0.5);
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
         .navbar-brand, .nav-link {
             color: var(--accent-color) !important;
             font-weight: 600;
@@ -26,12 +32,6 @@
         }
         .navbar-brand:hover, .nav-link:hover {
             color: var(--secondary-color) !important;
-        }
-        .navbar-toggler {
-            border-color: rgba(255,255,255,0.5);
-        }
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
         }
         .btn-custom {
             border-radius: 30px;
@@ -48,7 +48,7 @@
         }
         .btn-primary-custom:hover {
             background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
-            color: #fff;
+            color: #000000;
         }
         .btn-secondary-custom {
             background: transparent;
@@ -60,7 +60,9 @@
             color: #fff;
         }
         .hero-section {
-            background: linear-gradient(120deg, var(--primary-color) 60%, var(--secondary-color) 100%);
+            background: linear-gradient(to bottom, var(--primary-color)10%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 78%, var(--background-light)98%),
+            linear-gradient(60deg, var(--primary-color) 50%, rgba(0,0,0,0)80%),
+            linear-gradient(120deg, var(--primary-color) 50%, var(--secondary-color) 80%);
             padding: 120px 0 80px 0;
             color: var(--text-light);
         }
@@ -97,7 +99,7 @@
             border: 6px solid var(--background-light);
         }
         .about-section {
-            background: var(--background-light);
+            background: linear-gradient(to bottom, var(--background-light)90%, var(--background-dark)100%);
             padding: 80px 0;
             color: var(--text-light);
         }
@@ -122,6 +124,11 @@
             padding: 24px 32px;
             color: var(--accent-color);
             box-shadow: 0 2px 12px rgba(24, 90, 219, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .stat-box:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(54, 195, 242, 0.18);
         }
         .stat-number {
             font-size: 2.1rem;
@@ -170,7 +177,8 @@
             display: inline-block;
         }
         .testimonial-section {
-            background: linear-gradient(120deg, var(--primary-color) 60%, var(--secondary-color) 100%);
+            background: linear-gradient(to bottom, var(--background-dark) 0%,rgba(0,0,0,0)15%,rgba(0,0,0,0)85%, var(--background-light) 100%),
+            linear-gradient(120deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             padding: 80px 0;
         }
         .testimonial-card {
@@ -252,7 +260,7 @@
             color: var(--accent-color);
         }
         .footer {
-            background: var(--primary-color);
+            background: linear-gradient(to bottom, var(--background-light)0%, var(--primary-color) 5%);
             color: var(--text-light);
             padding: 60px 0 30px 0;
         }
